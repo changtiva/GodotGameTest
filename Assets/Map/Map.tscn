@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvyjpgmmrucwp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1uoeu"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6a23p"]
+material = SubResource("StandardMaterial3D_1uoeu")
+size = Vector3(50, 0.5, 50)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+use_collision = true
+mesh = SubResource("BoxMesh_6a23p")
