@@ -28,3 +28,4 @@ shadow_enabled = true
 [node name="Node3D" parent="." instance=ExtResource("1_iurp0")]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_rqk22")]
+RunSpeed = 450.0
