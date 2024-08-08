@@ -7,7 +7,6 @@ extends CharacterBody3D
 
 # 速度、跑步速度、跳跃力的变量
 @export var Speed := 300.0
-@export var RunSpeed := Speed * 1.5
 @export var thrust := 10.0
 # 获取系统重力
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -26,8 +25,8 @@ func _physics_process(delta: float) -> void:
 	
 	if direction:
 		if input_shift:
-			velocity.x = direction.x * delta * RunSpeed
-			velocity.z = direction.z * delta * RunSpeed
+			velocity.x = direction.x * delta * Speed * 1.5
+			velocity.z = direction.z * delta * Speed * 1.5
 			state_machine.travel("Fast Run")
 		else:
 			velocity.x = direction.x * delta * Speed
